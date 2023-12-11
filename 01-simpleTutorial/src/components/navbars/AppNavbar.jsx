@@ -25,6 +25,11 @@ export default function AppNavbar() {
                 Login
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/dashboard">
+                Dashboard
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
