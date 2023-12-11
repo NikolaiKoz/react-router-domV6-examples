@@ -1,6 +1,5 @@
+import AppNavbar from "../../components/navbars/AppNavbar";
 
 export default function Home() {
-  return (
-    <div>Home</div>
-  )
+  return <div><AppNavbar /></div>;
 }
