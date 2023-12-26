@@ -7,7 +7,7 @@ export default function PublicRoutes() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
-      <Route path="/dashboard" element={<PrivateRoutes />} />
+      <Route path="/dashboard/*" element={<PrivateRoutes />} />
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
   );
