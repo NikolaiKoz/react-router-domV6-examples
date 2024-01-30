@@ -1,7 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { Home, About, Blog, NotFound } from "../pages/public/publicPagesBarril";
+import {
+  Home,
+  About,
+  Blog,
+  NotFound,
+  Post,
+} from "../pages/public/publicPagesBarril";
 import { AppLayout } from "../layout/layoutBarril";
+import { loaderBlog } from "../utils/loaderBlog";
+import { loaderPost } from "../utils/loaderPost";
 export const routes = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +27,12 @@ export const routes = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+        loader: loaderBlog,
+      },
+      {
+        path: "/blog/:id",
+        element: <Post />,
+        loader: loaderPost,
       },
     ],
   },
